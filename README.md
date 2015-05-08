@@ -66,13 +66,13 @@ It is possible to search for, get, create and modify users.
 
 #### Search for users
 You can search for users with any available attribute present in your Active Directory. Several methods of comparison are supported for search filters:
-  *	equal, = - exactly equal;
-  *	not, !=, <> - exactly not equal
-  *	like, ~= - substring match (both sides);
-  *	gt, > - exactly greater than;
-  *	gte, >= - greater than or equal;
-  *	lt, < - exactly lesser than;
-  *	lte, <= - lesser than or equal;
+  *	__equal__, __=__ - exactly equal;
+  *	__not__, __!=__, __<>__ - exactly not equal
+  *	__like__, __~=__ - substring match (both sides);
+  *	__gt__, __>__ - exactly greater than;
+  *	__gte__, __>=__ - greater than or equal;
+  *	__lt__, __<__ - exactly lesser than;
+  *	__lte__, __<=__ - lesser than or equal;
   
 For example:
 ```php
@@ -93,7 +93,7 @@ $dm->getUser($user_rdn);
 Here you can limit attribute set again, making it faster to fetch and create.
 
 #### Create a user
-User creating is minimalistic. You simply provide username and password and in return receive an object. Several attributes will be set up automatically: cn, givenName, displayName, sn, objectclass, sAMAccountName, userPrincipalName, unicodePwd, userAccountControl. UAC settings are set to ADS_UF_DONT_EXPIRE_PASSWD | ADS_UF_NORMAL_ACCOUNT by default.
+User creating is minimalistic. You simply provide username and password and in return receive an object. Several attributes will be set up automatically: cn, givenName, displayName, sn, objectclass, sAMAccountName, userPrincipalName, unicodePwd, userAccountControl. UAC settings are set to `ADS_UF_DONT_EXPIRE_PASSWD | ADS_UF_NORMAL_ACCOUNT` by default.
 ```php
 $dm->addUser($user_name, $user_pass);
 ```
