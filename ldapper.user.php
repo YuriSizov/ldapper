@@ -86,7 +86,7 @@ class DirectoryUser extends DirectoryObject {
   }
 
   /**
-   * Name map X509 certificate from file
+   * Name map X.509 certificate from file
    *
    * @param string $file File path
    * @param bool   $b64  If true, then certificate string is treated as Base64 string, DER (binary) otherwise; defaults to an educated guess
@@ -100,7 +100,7 @@ class DirectoryUser extends DirectoryObject {
   }
 
   /**
-   * Name map X509 certificate from string
+   * Name map X.509 certificate from string
    *
    * @param string $certificate_string Certificate string
    * @param bool   $b64                If true, then certificate string is treated as Base64 string, DER (binary) otherwise; defaults to an educated guess
@@ -126,10 +126,10 @@ class DirectoryUser extends DirectoryObject {
   }
 
   /**
-   * Inner routine for X509 name mapping parsing
+   * Inner routine for X.509 name mapping parsing
    * A state machine of sorts
    *
-   * @param string $str Part of X509 mapping string
+   * @param string $str Part of X.509 mapping string
    * @return array Parsed data
    */
   private function parseX509($str) {
@@ -186,7 +186,7 @@ class DirectoryUser extends DirectoryObject {
   }
 
   /**
-   * Get name mappings (X509 and Kerberos, as well as others unknown)
+   * Get name mappings (X.509 and Kerberos, as well as others unknown)
    *
    * @return array Set of name mappings
    */

@@ -34,7 +34,7 @@ class DirectoryHelper {
   }
 
   /**
-   * Create a qualified string for X509 name mapping
+   * Create a qualified string for X.509 name mapping
    *
    * @param string $certificate_string Certificate as a string
    * @param bool $b64 If true, then certificate string is treated as Base64 string, DER (binary) otherwise; defaults to an educated guess

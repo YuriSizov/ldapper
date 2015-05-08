@@ -8,9 +8,10 @@
  * @version 1.2
  */
 namespace Ldapper;
+require_once "ldapper.helper.php"; // Additional functions
+require_once "ldapper.object.php"; // AD generic object representation
 require_once "ldapper.user.php";   // AD user representation
 require_once "ldapper.group.php";  // AD group representation
-require_once "ldapper.helper.php"; // Additional functions
 require_once "ldapper.uac.php";    // UAC settings
 
 /**
@@ -206,7 +207,7 @@ class DirectoryManager {
 
   /**
    * Authorize (or bind) user to AD using supplied credentials
-   * This user will be used for every operation, so it must have proper security access
+   * This user will be used for every operation, so it must have proper permissions
    *
    * @param string $userRDN User relative distinguished name (login)
    * @param string $userPwd User password
